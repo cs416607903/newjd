@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <style>
+        .page-header{margin-top: 0}
+        .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{vertical-align: middle}
+        footer{padding:20px;text-align: center}
+
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">OA办公系统</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html" ><span class=" glyphicon glyphicon-home"></span>&nbsp;&nbsp;页面首页</a></li>
+                <li class="active"><a href="user.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用户管理</a></li>
+                <li><a href="contmanage.html">内容管理</a></li>
+                <li><a href="label.html">标签管理</a></li>
+                <li><a href="mine.html">我的邮箱</a></li>
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><div><img src="images/touxiang.jpg" class="img-circle touxiang " alt=""></div></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">管理员 <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><span class="glyphicon glyphicon-tag"></span>&nbsp;&nbsp;个人管理</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;个人资料</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;修改密码</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;个人中心</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="list-group">
+                <a href="user.html" class="list-group-item">
+                    用户管理
+                </a>
+                <a href="user_search.html" class="list-group-item  active"> 用户搜索</a>
+                <a href="#" class="list-group-item" data-toggle="modal" data-target="#myModal">添加用户</a>
+
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="page-header">
+                <h4>用户管理</h4>
+            </div>
+            <div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation"><a href="user.html" aria-controls="home" role="tab">用户管理</a></li>
+                    <li role="presentation" class="active"><a href="user_search.html" aria-controls="profile" role="tab" >用户搜索</a></li>
+                    <li role="presentation" data-toggle="modal" data-target="#myModal"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab" >添加用户</a></li>
+
+                </ul>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form action="" >
+                            <div class="alert alert-info" role="alert"><strong>技巧提示：</strong>这里的山路十八弯</div>
+
+                            <div class="form-group">
+                                <label for="em">Email address</label>
+                                <input type="email" class="form-control" id="em" placeholder="用户名">
+                            </div>
+                            <div class="form-group">
+                                <label for="enx">Password</label>
+                                <input type="password" class="form-control" id="enx" placeholder="Password">
+                            </div>
+
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Check me out
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                Launch demo modal
+            </button>
+
+
+
+
+            <nav aria-label="Page navigation">
+                <ul class="pagination pull-right">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">添加用户</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="user_name">用户名</label>
+                            <input type="email" class="form-control" id="user_name" placeholder="用户名称">
+                        </div>
+                        <div class="form-group">
+                            <label for="usercode">用户密码</label>
+                            <input type="email" class="form-control" id="usercode" placeholder="用户密码">
+                        </div>
+                        <div class="form-group">
+                            <label for="userid">用户ID</label>
+                            <input type="email" class="form-control" id="userid" placeholder="用户ID">
+                        </div>
+                        <div class="form-group">
+                            <label for="user_email">用户邮箱</label>
+                            <input type="email" class="form-control" id="user_email" placeholder="用户邮箱">
+                        </div>
+                        <label for="vip">用户邮箱</label>
+                        <select name="" id="vip" class="form-control">
+                            <option>初级会员</option>
+                            <option>高级会员</option>
+                            <option>黄金会员</option>
+                            <option>钻石会员</option>
+                        </select>
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        联系方式：15888888888
+    </div>
+</footer>
+</body>
+</html>
